@@ -1,7 +1,8 @@
 const zmq = require("zeromq");
 const csvtojson = require("csvtojson");
-const sock = new zmq.Push();
 
+
+const sock = new zmq.Push();
 console.log("About to send jobs!");
 csvtojson()
   .fromFile("deneme3.csv")
