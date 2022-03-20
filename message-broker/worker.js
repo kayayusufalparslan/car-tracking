@@ -7,7 +7,7 @@ const Taxi = require("./vehicleData");
 
 // connect to mongodb
 const dbURI =
-  "mongodb+srv://kayayusufalparslan:test12345@cluster0.itwz8.mongodb.net/arac-takip?retryWrites=true&w=majority";
+  databaseConnectionLink; // Your database connection link will be in here!
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) =>run())
