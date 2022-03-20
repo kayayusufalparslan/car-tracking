@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('../views/partials/head.ejs') %>
+
+<body>
+
+    <%- include('../views/partials/nav.ejs') %>
+
+    <div class="login">
+        <h1>Pick a Car and Select a time</h1>
+        <form action="/car" method="post">
+            <label for="carID" class="form-label">Car ID</label>
+            <select id="carID" class="form-select" name="carID">
+                <option selected>Araç Seçiniz</option>
+                <option value=3>3</option>
+                <option value=7>7</option>
+                <option value=12>12</option>
+                <option value=27>27</option>
+            </select>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name="startDate" placeholder="Başlangıç Tarihi" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class='input-group date' id='datetimepicker2'>
+                <input type='text' class="form-control" name="endDate" placeholder="Bitiş Tarihi" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            <input type="submit" value="Show The Car">
+    </div>
+
+
+    </form>
+    </div>
+
+    <%- include('../views/partials/footer.ejs') %>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker({
+                format: 'YYYY-MM-DDTHH:mm:00.000+00:00',
+            });
+            $('#datetimepicker2').datetimepicker({
+                format: 'YYYY-MM-DDTHH:mm:00.000+00:00',
+            });
+
+        });
+    </script>
+</body>
+
+</html>
